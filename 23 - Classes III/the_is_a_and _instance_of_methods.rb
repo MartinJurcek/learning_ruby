@@ -18,19 +18,16 @@ end
 class Worker < Employee
 end
 
-puts Manager.superclass
-puts Worker.superclass
-puts Employee.superclass
+bob = Manager.new("Bob", 48)
 
-p Manager.ancestors
-p Worker.ancestors
-p Employee.ancestors
+puts bob.instance_of?(Manager)
+puts bob.instance_of?(Employee)
+puts bob.instance_of?(Object)
+puts bob.instance_of?(BasicObject)
 
 puts 
 
-puts Manager < Employee
-puts Worker < Employee
-puts Employee < Worker
-puts Manager < Object
-puts Manager < BasicObject
-
+puts bob.is_a?(Manager)
+puts bob.is_a?(Employee)
+puts bob.is_a?(Object)
+puts bob.is_a?(BasicObject)
